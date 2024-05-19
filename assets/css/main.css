@@ -1,4 +1,9 @@
 
+/**
+* Template Author: BootstrapMade.com
+* Template Name: Day
+*/
+
 /* Fonts */
 :root {
   --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -698,7 +703,7 @@ h6 {
   z-index: 999999;
   overflow: hidden;
   background: var(--background-color);
-  transition: all 0.6s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 #preloader:before {
@@ -711,7 +716,7 @@ h6 {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
+  animation: animate-preloader 1s linear infinite;
 }
 
 @keyframes animate-preloader {
@@ -986,7 +991,10 @@ section,
 }
 
 .about .content p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 70px;
+}
+.about .content p {
+  margin-top: -30px;
 }
 
 .about .content .read-more {
@@ -1001,6 +1009,7 @@ section,
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .about .content .read-more i {
@@ -1025,6 +1034,7 @@ section,
   display:block; /* Make image a block element for margin purposes */
   margin-top: 40px; /* Add margin at the top */
   padding: 50px;
+  
 }
 
 /*--------------------------------------------------------------
@@ -1034,6 +1044,11 @@ section,
   color: var(--default-color);
   font-weight: 150;
   font-size: 17px;
+}
+
+.services .content {
+  margin-top: -4px;
+  margin-bottom: 40px;
 }
 
 .divider {
