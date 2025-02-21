@@ -298,7 +298,7 @@ h6 {
     inset: 60px 20px 20px 20px;
     padding: 10px 0;
     margin: 0;
-    border-radius: 10px;
+    border-radius: 2px;
     background-color: var(--nav-dropdown-background-color);
     overflow-y: auto;
     transition: 0.3s;
@@ -320,6 +320,10 @@ h6 {
     transition: 0.3s;
   }
 
+  .navmenu a:hover {
+    background-color: #e5e5e580;
+  }
+  
   .navmenu a i,
   .navmenu a:focus i {
     font-size: 12px;
@@ -473,12 +477,25 @@ h6 {
   }
 }
 
+/* Hide divider by default (for desktop) */
+hr.divider {
+  display: none;
+}
+
+/* Show divider only on mobile devices */
+@media (max-width: 768px) {
+  hr.divider {
+    display: block;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
   --background-color: #0a234d;
-  --default-color: #ffffffbc;
+  --default-color: #e8e8e8bc;
   --heading-color: #f9f9f9;
   color: var(--default-color);
   background-color: var(--background-color);
