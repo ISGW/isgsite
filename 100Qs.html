@@ -41,7 +41,7 @@ body,input {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #007bff;
+      background-color: #3b52b9;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -53,7 +53,7 @@ body,input {
     }
 
     #goToTop:hover {
-      background-color: #0056b3;
+      background-color: #2d3a78;
     }
 
     /* Smooth Scroll */
@@ -61,16 +61,126 @@ body,input {
       scroll-behavior: smooth;
     }
 
+        @media (max-width: 480px) {
+            body {
+                padding: 16px;
+                gap: 16px;
+            }
+        }
+
+        .modern-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #3b52b9;
+            color: white;
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 20px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-height: 48px;
+            min-width: 150px;
+            touch-action: manipulation;
+            margin-bottom: 20px;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .modern-button {
+                padding: 18px 36px;
+                font-size: 20px;
+                gap: 14px;
+                border-radius: 14px;
+                min-height: 56px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modern-button {
+                padding: 20px 40px;
+                font-size: 22px;
+                gap: 16px;
+                border-radius: 16px;
+                min-height: 64px;
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        .modern-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .modern-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .modern-button:hover::before {
+            left: 100%;
+        }
+
+        .modern-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .button-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        /* Mobile icon sizing */
+        @media (max-width: 768px) {
+            .button-icon {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .button-icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+
 </style>
 </head>
 <body>
 <div><h1 data-heading="Civics Questions and Answers" dir="auto">Civics Questions and Answers</h1>
 <p dir="auto"><em>U.S. Citizenship and Immigration Services (rev. 08/21)</em></p>
 
-<p dir="auto"><strong><a data-tooltip-position="top" rel="noopener nofollow" class="external-link" href="https://www.uscis.gov/sites/default/files/document/audio/ENG_ALL_100.mp3" target="_blank">Audio</a></strong></p>
-<p dir="auto"><strong><a data-tooltip-position="top" rel="noopener nofollow" class="external-link" href="https://www.uscis.gov/sites/default/files/document/questions-and-answers/OoC_100_Questions_2008_Civics_Test_V1.pdf" target="_blank">Download Questions and Answers PDF</a></strong></p>
-<p dir="auto"><strong><a data-tooltip-position="top" rel="noopener nofollow" class="external-link" href="https://www.uscis.gov/sites/default/files/document/flash-cards/OoC_Civics-Flash-Cards_2008_Civics_Test_WEB_V1_508.pdf" target="_blank">Flash Cards PDF</a></strong></p>
-
+<a href="https://www.uscis.gov/sites/default/files/document/audio/ENG_ALL_100.mp3" class="modern-button" target="_blank" rel="noopener nofollow">
+        <svg class="button-icon" viewBox="0 0 24 24">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+        </svg>
+        Audio
+    </a>
+<br>
+  <a href="https://www.uscis.gov/sites/default/files/document/questions-and-answers/OoC_100_Questions_2008_Civics_Test_V1.pdf" class="modern-button" target="_blank" rel="noopener nofollow">
+        Download PDF
+    </a>
+    <br>
+    <a href="https://www.uscis.gov/sites/default/files/document/flash-cards/OoC_Civics-Flash-Cards_2008_Civics_Test_WEB_V1_508.pdf" class="modern-button" target="_blank" rel="noopener nofollow">
+        Flash Cards
+    </a>
 
 <hr>
   <!-- Navigation Links -->
