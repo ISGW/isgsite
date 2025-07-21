@@ -905,7 +905,7 @@ section,
   --default-color: #ffffff;
   --heading-color: #ffffffbe;
   width: 100%;
-  min-height: 100vh;
+  min-height: 85vh;
   position: relative;
   padding: 160px 0 100px 0;
   display: flex;
@@ -983,8 +983,8 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about{
+  font-weight: 400;
   font-size: 17px;
-  font-weight: 200;
 }
 
 .about .content h2 {
